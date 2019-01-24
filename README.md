@@ -1,8 +1,7 @@
 # ofxViveTracker-OSC
-I wanna use vive tracker as rigid body.
+This addon utilizes a python script (in the folder "client") to send OSC messages from the Vive system to the OF Application. 
 
-- Python OSC client streams Vive trackers' transforms.
-- It might be simpler than using ofxOpenVR if you do not want to use Vive as HMD...
+The scripts "vivetracker_client-send-unqiue-id-and-position.py" and "vivetracker_client-send-unqiue-id-position-quaternion.py" can be used to send position or position and quaternions for generic trackers (pucks) with unique ID's over OSC.
 
 ### How to Use
 - Tested on Windows 10 only.
