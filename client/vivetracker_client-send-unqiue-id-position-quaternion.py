@@ -63,10 +63,10 @@ if interval:
 					q = pq[3:]
 					
 					# Choose which values to send
-					values = [serialNumberToUniqueID[serial], p[0], p[1], p[2], q[0], q[1], q[2], q[3]]
+					values = [p[0], p[1], p[2], q[1], q[2], q[3], q[0]]
 
 					# Send this message with the header "vive"
-					client.send_message("/vive", values)
+					client.send_message("/"+str(serialNumberToUniqueID[serial]), values)
 
 		print("\r{0}".format(start), end="")
 		if sleep_time>0:
