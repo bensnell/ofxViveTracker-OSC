@@ -4,6 +4,7 @@ import sys
 import argparse
 from pythonosc import osc_message_builder
 from pythonosc import udp_client
+import math
 
 # Initialize OpenVR in the 
 vr = openvr.init(openvr.VRApplication_Other)
@@ -58,7 +59,7 @@ if interval:
 					# Get the position and quaternion from this matrix
 					pq = convert_to_quaternion(m)
 					# Extract position
-					p = pq[:2]
+					p = pq[:3]
 					q = pq[3:]
 					
 					# Choose which values to send
